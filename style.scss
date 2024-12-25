@@ -1,0 +1,45 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+@mixin createredbox($x,$y,$z)
+{
+    background-color: rgb($x,$y,$z);
+}
+.bg{
+    background-color:rgb(0, 1, 10);
+
+}
+@for $col from 0 to 255{
+    .bg-red-#{$col}
+    {
+    @include createredbox (0,$col*4,$col/6)
+
+    }
+
+
+.box-#{$col}
+{
+    height:$col + 20px;
+    width:$col + 100px;
+}
+.flex{
+    display: flex;
+}
+
+.flex-wrap
+{
+    flex-wrap: wrap;
+}
+.item-align
+{
+    align-items: center;
+}
+.gap-#{$col}{
+ gap:$col + px;
+}
+.font-color{
+    color:beige;
+}
+}
